@@ -1,0 +1,156 @@
+/* src/styles/apartmentdetails.css */
+
+.apartment-details-page {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.apartment-details-content {
+  display: flex;
+  flex-wrap: wrap; /* Дозволяє блокам переноситися на новий рядок на малих екранах */
+  gap: 40px; /* Відстань між секціями */
+  justify-content: center; /* Центруємо вміст */
+}
+
+/* Apartment Info Section (Left Side) */
+.apartment-info {
+  flex: 2; /* Займає більшу частину простору */
+  min-width: 300px; /* Мінімальна ширина для адаптивності */
+  background-color: var(--bg-white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apartment-info-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.apartment-info-title {
+  font-size: 2.2em;
+  color: var(--dark-color);
+  margin-bottom: 15px;
+}
+
+.apartment-info-description {
+  font-size: 1.1em;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.apartment-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Дві колонки */
+  gap: 15px;
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+.apartment-info-grid p strong {
+  color: var(--primary-color);
+}
+
+/* Rental Form Section (Right Side) */
+.rental-form-section {
+  flex: 1; /* Займає меншу частину простору */
+  min-width: 300px;
+  max-width: 400px; /* Обмежуємо ширину форми */
+  background-color: var(--bg-white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rental-form-section h3 {
+  font-size: 1.8em;
+  color: var(--dark-color);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.rental-form .form-group {
+  margin-bottom: 20px;
+}
+
+.rental-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--dark-color);
+}
+
+.rental-form input[type="text"],
+.rental-form input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.rental-form .read-only-input {
+  background-color: var(--bg-light);
+  color: var(--secondary-color);
+  cursor: not-allowed;
+}
+
+/* DatePicker custom styles */
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box; /* Важливо для правильного розміру */
+}
+
+.total-cost-display {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--success-color);
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e6ffe6; /* Легкий зелений фон */
+  border-radius: 5px;
+}
+
+.rent-button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.rent-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .apartment-details-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .apartment-info,
+  .rental-form-section {
+    width: 90%; /* Ширше на малих екранах */
+    max-width: none; /* Знімаємо обмеження max-width */
+  }
+
+  .apartment-info-grid {
+    grid-template-columns: 1fr; /* Одна колонка на малих екранах */
+  }
+}

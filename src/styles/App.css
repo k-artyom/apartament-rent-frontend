@@ -1,0 +1,11 @@
+/* src/styles/App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1; /* Дозволяє основному контенту займати весь доступний простір */
+  padding: 20px 0; /* Додайте відступи зверху та знизу */
+}
