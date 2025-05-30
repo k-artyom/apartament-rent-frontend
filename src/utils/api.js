@@ -2,7 +2,7 @@
 
 // const API_BASE_URL = 'http://localhost:5000/api'; // Базовий URL для нашого бекенду
 // const API_BASE_URL = 'https://api.render.com/deploy/srv-d0sosa95pdvs738vk9ag?key=SXuKlb_CJfQ';
-const API_BASE_URL = 'https://apartament-rent-backend.onrender.com';
+const API_BASE_URL = 'https://apartament-rent-backend.onrender.com/api';
 
 // Універсальна функція для виконання запитів до API
 const apiRequest = async (url, method = 'GET', data = null) => {
